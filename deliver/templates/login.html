@@ -1,0 +1,27 @@
+{% load crispy_forms_tags %}
+{% block body %}
+
+
+
+<div class="container">
+
+    <h1>Login</h1>
+    <hr style="color:black;">
+
+<form action="login" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter Your UserName"><br>
+    <input type="password" name="password" placeholder="Enter Your Password"><br>
+
+</form>
+
+    <button type="submit" class="btn btn-success" id="logbtn">Login</button>
+    <a class="btn btn-secondary"href="{% url 'register' %}">Register</a>
+
+</form>
+</div>
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,101 @@
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+<center>
+<h2>Booking</h2>
+</center>
+
+<div class="container mb-5">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
+        </div>
+    </div>
+</div>
+
+<br>
+ <form action="register" method="post">
+         {% csrf_token %}
+ <b><label for="Customer Name">Customer Name</label></b>
+             <div class="form-outline mb-4">
+                  <input type="text" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example3cg"></label>
+                </div>
+ <b><label for="Customer Name">Email</label></b>
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example3cg"></label>
+                </div>
+<b><label for="Customer Name">Phone Number</label></b>
+             <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg"/>
+                  <label class="form-label" for="form3Example4cg"></label>
+                 </div>
+<b><label for="Customer Name">Address</label></b>
+<div class="form-outline mb-4">
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example8"></label>
+                </div>
+
+<div class="row">
+                  <div class="col-md-6 mb-4">
+
+                    <select class="select">
+                      <option value="1">Branch</option>
+                      <option value="2">Trivandrum</option>
+                      <option value="3">Kollam</option>
+                      <option value="4">Allapuzha</option>
+                        <option value="5">Pathanamthitta</option>
+                      <option value="2">Thrissur</option>
+                      <option value="3">Kasargod</option>
+                      <option value="4">Kozhikode</option>
+                    </select>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <select class="select">
+                      <option value="1">sub branch</option>
+                      <option value="1">Killipalam</option>
+                      <option value="1">Aryasala</option>
+                      <option value="1">Chalai</option>
+                      <option value="2">Killipalam</option>
+                      <option value="2">Aryasala</option>
+                      <option value="2">Chalai</option>
+                    </select>
+                  </div>
+                </div>
+     <br>
+
+     <div class="mb-4">
+<b><label for="Customer Name">Food</label></b>
+<div class="form-outline mb-4">
+                <select class="select">
+                  <option value=">Food</option>
+                   <option value="0">Food</option>
+                  <option value="1">Idli Sambhaar</option>
+                  <option value="2">Tomato Pizza</option>
+                  <option value="3">Paper Dosa</option>
+                </select>
+
+              </div>
+<center>
+        <div class="d-flex justify-content-end pt-3">
+
+          <a class="btn btn-success" href="">Submit</a>
+               <a class="btn btn-dark" href="{% url 'restaurant:index' %}">SIgnOut</a>
+                </div>
+</center>
+</div>
+
+                  </div>
+                </div>
+
+    </div>
+  </div>
+</div>
+              </form>
+
+            </div>
+{% endblock content %}
